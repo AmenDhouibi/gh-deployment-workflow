@@ -1,0 +1,14 @@
+name: deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  render-html-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Display greeting
+        run: echo "Hello, GitHub Actions!"
